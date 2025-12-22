@@ -72,7 +72,7 @@ class TauriVpnService : VpnService() {
         
         var mtu = args?.getInt(MTU) ?: 1500
         var ipv4Addr = args?.getString(IPV4_ADDR) ?: "10.126.126.1/24"
-        var dns: String? = args?.getString(DNS)
+        var dns: String = args?.getString(DNS) ?: "8.8.8.8"
         var routes = args?.getStringArray(ROUTES) ?: emptyArray()
         var disallowedApplications = args?.getStringArray(DISALLOWED_APPLICATIONS) ?: emptyArray()
 
